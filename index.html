@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b70">
+  <title>BEPC PREPAS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">BEPC <span>PREPAS</span></a>
+    <button id="logoutBtn" class="btn btn-outline hidden" type="button">
+      Déconnexion
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">PRÉPARATION AU BEPC · MADAGASCAR</p>
+      <h1>Prépare ton BEPC avec méthode.</h1>
+      <p>Entraîne-toi avec des sujets et consulte ta correction.</p>
+    </section>
+
+    <section class="panel" id="accountPanel">
+      <h2>Ton compte</h2>
+
+      <div class="tabs">
+        <button type="button" class="tab active" id="showRegister">
+          Créer un compte
+        </button>
+        <button type="button" class="tab" id="showLogin">
+          Se connecter
+        </button>
+      </div>
+
+      <form id="registerForm">
+        <label for="registerName">Nom complet</label>
+        <input id="registerName" type="text" autocomplete="name"
+               placeholder="Ton nom complet" required minlength="2">
+
+        <label for="registerEmail">Adresse e-mail</label>
+        <input id="registerEmail" type="email" autocomplete="email"
+               placeholder="exemple@email.com" required>
+
+        <label for="registerPassword">Mot de passe</label>
+        <input id="registerPassword" type="password"
+               autocomplete="new-password"
+               placeholder="Au moins 6 caractères"
+               minlength="6" required>
+
+        <button class="btn btn-primary full" type="submit">
+          Créer mon compte
+        </button>
+      </form>
+
+      <form id="loginForm" class="hidden">
+        <label for="loginEmail">Adresse e-mail</label>
+        <input id="loginEmail" type="email" autocomplete="email" required>
+
+        <label for="loginPassword">Mot de passe</label>
+        <input id="loginPassword" type="password"
+               autocomplete="current-password" required>
+
+        <button class="btn btn-primary full" type="submit">
+          Se connecter
+        </button>
+      </form>
+
+      <p id="accountMessage" class="message" role="status"></p>
+    </section>
+
+    <section id="memberPanel" class="panel hidden">
+      <h2>Mon espace</h2>
+      <p>Bonjour, <strong id="memberName">Élève</strong> !</p>
+
+      <p>Statut Premium :
+        <strong id="premiumStatus">Non activé</strong>
+      </p>
+
+      <p id="requestDetails" class="muted"></p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">ENTRAÎNEMENT</p>
+      <h2>Les sujets de français</h2>
+
+      <div class="subjects-grid">
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill free-pill">GRATUIT</span>
+            <span class="subject-number">01</span>
+          </div>
+          <h3>Sujet type 4</h3>
+          <p>Commence ta préparation avec cet exercice gratuit.</p>
+          <a class="btn btn-primary full" href="sujet4.html">
+            Faire l'exercice
+          </a>
+        </article>
+
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill premium-pill">PREMIUM</span>
+            <span class="subject-number">02</span>
+          </div>
+          <h3>Sujet BEPC 2006</h3>
+          <p>Entraîne-toi avec ce sujet supplémentaire.</p>
+          <a class="btn btn-premium full premium-link" href="sujet2006.html">
+            🔒 Débloquer avec Premium
+          </a>
+        </article>
+
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill premium-pill">PREMIUM</span>
+            <span class="subject-number">03</span>
+          </div>
+          <h3>Sujet BEPC 2007</h3>
+          <p>Continue à approfondir tes connaissances.</p>
+          <a class="btn btn-premium full premium-link" href="sujet2007.html">
+            🔒 Débloquer avec Premium
+          </a>
+        </article>
+
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill premium-pill">PREMIUM</span>
+            <span class="subject-number">04</span>
+          </div>
+          <h3>Sujet BEPC 2008</h3>
+          <p>Prépare-toi avec un autre sujet.</p>
+          <a class="btn btn-premium full premium-link" href="2008.html">
+            🔒 Débloquer avec Premium
+          </a>
+        </article>
+
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill premium-pill">PREMIUM</span>
+            <span class="subject-number">05</span>
+          </div>
+          <h3>Sujet BEPC 2010</h3>
+          <p>Entraîne-toi avant l'examen.</p>
+          <a class="btn btn-premium full premium-link" href="2010.html">
+            🔒 Débloquer avec Premium
+          </a>
+        </article>
+
+        <article class="subject-card">
+          <div class="subject-top">
+            <span class="pill premium-pill">PREMIUM</span>
+            <span class="subject-number">06</span>
+          </div>
+          <h3>Sujet BEPC 2011</h3>
+          <p>Un dernier sujet pour compléter ton entraînement.</p>
+          <a class="btn btn-premium full premium-link" href="2011.html">
+            🔒 Débloquer avec Premium
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel premium-panel" id="premiumPanel">
+      <p class="eyebrow">ACCÈS COMPLET</p>
+      <h2>Débloquer la fonction Pro</h2>
+      <p>Obtiens l'accès aux cinq sujets Premium pour <strong>2 000 Ar</strong>.</p>
+
+      <button id="payProBtn" class="btn btn-premium full" type="button">
+        Payer pour la fonction Pro
+      </button>
+
+      <div id="paymentInstructions" class="payment-instructions hidden">
+        <h3>Toromarika momba ny fandoavana</h3>
+
+        <p>
+          Alefa amin'ito numéro ito ny vidiny : 2000ar ary atao référence
+          mazava tsara ny email sy anarana nanokafana ny compte.
+        </p>
+
+        <p><strong>Numéro : 0330608880</strong></p>
+
+        <p><strong>Nom :</strong> <span id="paymentName"></span></p>
+        <p><strong>Email :</strong> <span id="paymentEmail"></span></p>
+
+        <p class="muted">
+          Ampidiro ho référence amin'ny paiement ny anaranao sy ny email
+          ampiasainao amin'ity compte ity.
+        </p>
+
+        <button id="confirmPaymentBtn" class="btn btn-primary full" type="button">
+          Confirmer le paiement
+        </button>
+
+        <p class="small muted">
+          ⚡
+        </p>
+      </div>
+
+      <p id="paymentMessage" class="message" role="status"></p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> BEPC PREPAS · Madagascar</p>
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html> 
